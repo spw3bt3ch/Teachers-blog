@@ -6,7 +6,10 @@ import { BookOpen, Users, Lightbulb, TrendingUp, Award, MessageSquare, Zap, Chec
 
 async function getFeaturedPosts() {
   try {
-    const res = await fetch(`${process.env.NEXTAUTH_URL || 'http://localhost:3000'}/api/posts?featured=true&limit=3`, {
+    const baseUrl = process.env.NEXTAUTH_URL || (process.env.VERCEL_URL 
+      ? `https://${process.env.VERCEL_URL}` 
+      : 'http://localhost:3000');
+    const res = await fetch(`${baseUrl}/api/posts?featured=true&limit=3`, {
       cache: 'no-store',
     });
 
@@ -23,7 +26,10 @@ async function getFeaturedPosts() {
 
 async function getRecentPosts() {
   try {
-    const res = await fetch(`${process.env.NEXTAUTH_URL || 'http://localhost:3000'}/api/posts?limit=6`, {
+    const baseUrl = process.env.NEXTAUTH_URL || (process.env.VERCEL_URL 
+      ? `https://${process.env.VERCEL_URL}` 
+      : 'http://localhost:3000');
+    const res = await fetch(`${baseUrl}/api/posts?limit=6`, {
       cache: 'no-store',
     });
 
