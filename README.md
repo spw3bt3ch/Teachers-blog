@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TTribe - Nigerian Teachers Blog
 
 A vibrant, interactive community blog platform specifically designed for Nigerian teachers and educators to share knowledge, resources, and connect with peers.
@@ -168,3 +169,7 @@ For support, email support@ttribe.com or create an issue in the repository.
 ---
 
 Built with ❤️ for Nigerian Teachers
+=======
+# Teachers-blog
+This is a blog meant for Nigerian Teachers and Educators
+>>>>>>> cfa3a97c9f84b596d412414b37a504d45794cd06

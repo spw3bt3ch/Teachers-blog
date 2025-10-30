@@ -24,16 +24,23 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+<<<<<<< HEAD
 # local env files - DO NOT COMMIT
 .env*.local
 .env
 .env.production
 .env.development
 .env.test
+=======
+# local env files
+.env*.local
+.env
+>>>>>>> cfa3a97c9f84b596d412414b37a504d45794cd06
 
 # vercel
 .vercel
 
+<<<<<<< HEAD
 # secrets and credentials - DO NOT COMMIT
 *.key
 *.pem
@@ -67,6 +74,8 @@ Thumbs.db
 ehthumbs.db
 Thumbs.db
 
+=======
+>>>>>>> cfa3a97c9f84b596d412414b37a504d45794cd06
 # typescript
 *.tsbuildinfo
 next-env.d.ts
