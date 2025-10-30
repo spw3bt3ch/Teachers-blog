@@ -4,8 +4,11 @@ import CommentSection from '@/components/comments/CommentSection';
 
 async function getPost(slug: string) {
   try {
+    const baseUrl = process.env.NEXTAUTH_URL || (process.env.VERCEL_URL 
+      ? `https://${process.env.VERCEL_URL}` 
+      : 'http://localhost:3000');
     const res = await fetch(
-      `${process.env.NEXTAUTH_URL || 'http://localhost:3000'}/api/posts/${slug}`,
+      `${baseUrl}/api/posts/${slug}`,
       { cache: 'no-store' }
     );
 
