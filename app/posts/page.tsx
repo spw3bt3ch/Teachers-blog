@@ -4,8 +4,11 @@ import PostList from '@/components/blog/PostList';
 
 async function getPosts(page: number = 1) {
   try {
+    const baseUrl = process.env.NEXTAUTH_URL || (process.env.VERCEL_URL 
+      ? `https://${process.env.VERCEL_URL}` 
+      : 'http://localhost:3000');
     const res = await fetch(
-      `${process.env.NEXTAUTH_URL || 'http://localhost:3000'}/api/posts?page=${page}&limit=12`,
+      `${baseUrl}/api/posts?page=${page}&limit=12`,
       { cache: 'no-store' }
     );
 
